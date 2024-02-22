@@ -52,7 +52,7 @@ sim dor(const c&) { ris; }
 #define db(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
 
 const ll N = 2e5;
-bool prime[N];
+bool prime[N+1];
 vll v;
 
 void sieve(){
@@ -76,7 +76,7 @@ int main(){
 	cin.tie(0);
 	
 	sieve();
-	for(int i = 2; i < N; ++i){
+	for(int i = 2; i <= N; ++i){
 		if(prime[i]==false) v.pb(i);
 	}
 	
